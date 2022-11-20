@@ -1,0 +1,36 @@
+*, html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Sans-Serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /*background-image: url('robot1.jpg');*/
+  opacity: 1;
+  background: #FFE4C4;
+  flex-direction: column;
+}
+div input {
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #FFFAFA;
+  
+}
+
+button {
+  background: #98FB98;
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  border-style: none;
+  border-color: #999;
+  margin-left: 10px;
+  margin-top: 20px;
+}
