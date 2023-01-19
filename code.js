@@ -5,7 +5,9 @@ let init = 0
 
 const botSay = (data) => {
   return [
-    "Haii, kenalin aku RizkiBot, utusan 1000 Tahun dari masa depan. Kalo boleh tau, kamu apa kabar?",
+    
+    "Haiii kenalin aku RizkiBot, utusan dari masa depan, kalo boleh tau nama kamu siapa?",
+    `Ooh ${data?.nama} ,kamu apa kabar?`,
     `Mmm ${data?.kabar} ya, btw kamu lagi apa?`,
     `Ohhh ${data?.lagiapa}, bagus deh, eh iya dari data 1000 Tahun lalu, aku dapetin data yang bilang kalo kamu itu cantik banget, emang iya?`,
     `Hihi, tapi yasudahlah kita lupakan saja, RizkiBot mau nanya, kamu punya pacar gak?`,
@@ -20,18 +22,20 @@ let usersData = []
 function botStart() {
 init++
 if (init === 1) {
-  botDelay({ kabar: jawaban.value})
+  botDelay({ nama: jawaban.value})
 } else if (init === 2) {
-  botDelay({ lagiapa: jawaban.value})
+  botDelay({ kabar: jawaban.value})
 } else if (init === 3) {
-  botDelay({ hobi: jawaban.value})
+  botDelay({ lagiapa: jawaban.value})
 } else if (init === 4) {
-  botDelay({ pacar: jawaban.value})
+  botDelay({ hobi: jawaban.value})
 } else if (init === 5) {
+  botDelay({ pacar : jawaban.value})
+} else if (init === 6) {
   finishing()
 } else {
   botEnd()
-  }
+}
 }
 
 function botDelay(jawabanUser) {
@@ -45,7 +49,7 @@ function botDelay(jawabanUser) {
 
 function finishing() {
   pertanyaan.innerHTML = `Thank u ya udah mau nemenin RizkiBot, kali-kali kita jalan bareng ya :)`
-  jawaban.value = "Thanks juga sayang, boleh tuh"
+  jawaban.value = "Thanks juga RizkiBot, boleh tuh"
 }
 
 function  botEnd() {
